@@ -17,7 +17,8 @@
     "dev": "cross-env NODE_ENV=development dotenv -e .env.development -- tsx watch src/index.ts",
     "start": "cross-env NODE_ENV=production dotenv -e .env.production -- tsx src/index.ts",
 
-    "postinstall": "cross-env PRISMA_SCHEMA_PATH=prisma/dev.schema.prisma npx prisma generate"
+    "postinstall": "echo \"skip prisma on vercel\""
+
   },
   "dependencies": {
     "@prisma/client": "^5.18.0",
